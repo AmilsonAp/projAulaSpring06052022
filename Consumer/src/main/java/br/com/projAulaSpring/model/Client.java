@@ -13,7 +13,13 @@ public class Client implements Serializable {
     private String Date;
     private int NumberOfStudent;
 
-    public Client(){}
+    public Client(String id, String description, String date, int numberOfStudent){
+        this._id = id; this.Description = description; this.Date = date; this.NumberOfStudent = numberOfStudent;
+    }
+
+    public Client(){
+
+    }
 
     public String get_id() {
         return _id;

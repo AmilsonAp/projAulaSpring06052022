@@ -27,4 +27,16 @@ public class ClientService {
     public List<Client> findAll(){
         return clientRepository.findAll();
     }
+
+    public void sendClientRabbit(Client client){
+        clientProducer.send(client);
+    }
+
+    public void delete(String id){
+        clientRepository.deleteById(id);
+    }
+
+    public void deleteAll(){
+        clientRepository.deleteAll();
+    }
 }
