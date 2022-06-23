@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class App {
 
-    @Value("${queue.client.name}")
-    private String clientQueue;
+    @Value("${queue.cliente.name}")
+    private String clienteQueue;
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
@@ -18,6 +18,6 @@ public class App {
 
     @Bean
     public Queue queue(){
-        return new Queue(clientQueue, true);
+        return new Queue(clienteQueue, true);
     }
 }
